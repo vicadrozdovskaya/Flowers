@@ -1,19 +1,22 @@
 package by.drozdovskaya.entity;
 
-public class Flower {
+public class Accessories {
 	
+	private int price;
 	private String name;
 	private String colour;
-	private int price;
 	
-	public Flower() {
-		
-	}
-
-	public Flower(String name, String colour, int price) {
-		super();
+	public Accessories(int price, String name, String colour) {
+		this.price = price;
 		this.name = name;
 		this.colour = colour;
+	}
+
+	public int getPrice() {
+		return price;
+	}
+
+	public void setPrice(int price) {
 		this.price = price;
 	}
 
@@ -33,21 +36,10 @@ public class Flower {
 		this.colour = colour;
 	}
 
-
-	public int getPrice() {
-		return price;
-	}
-
-	public void setPrice(int price) {
-		this.price = price;
-	}
-
 	@Override
 	public String toString() {
-		return "Flower name=" + name + ", colour=" + colour + ", price=" + price;
+		return "Accessories price=" + price + ", name=" + name + ", colour=" + colour;
 	}
-	
-	
 	
 	
 	
