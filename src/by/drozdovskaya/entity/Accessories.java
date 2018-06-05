@@ -1,23 +1,14 @@
 package by.drozdovskaya.entity;
 
-public class Accessories {
+public class Accessories extends PartOfBouquet {
 	
-	private int price;
 	private String name;
 	private String colour;
 	
 	public Accessories(int price, String name, String colour) {
-		this.price = price;
+		super(price);
 		this.name = name;
 		this.colour = colour;
-	}
-
-	public int getPrice() {
-		return price;
-	}
-
-	public void setPrice(int price) {
-		this.price = price;
 	}
 
 	public String getName() {
@@ -38,7 +29,7 @@ public class Accessories {
 
 	@Override
 	public String toString() {
-		return "Accessories price=" + price + ", name=" + name + ", colour=" + colour;
+		return "\nAccessories  name = " + name + ", colour = " + colour + " " + super.toString();
 	}
 	
 	

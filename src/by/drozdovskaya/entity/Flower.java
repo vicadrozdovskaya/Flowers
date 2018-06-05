@@ -1,20 +1,22 @@
 package by.drozdovskaya.entity;
 
-public class Flower {
-	
+import java.util.Date;
+
+public class Flower extends PartOfBouquet {
+
 	private String name;
 	private String colour;
-	private int price;
-	
+	private Date date;
+
 	public Flower() {
-		
+
 	}
 
-	public Flower(String name, String colour, int price) {
-		super();
+	public Flower(String name, String colour, int price, Date date) {
+		super(price);
 		this.name = name;
 		this.colour = colour;
-		this.price = price;
+		this.setDate(date);
 	}
 
 	public String getName() {
@@ -33,24 +35,17 @@ public class Flower {
 		this.colour = colour;
 	}
 
-
-	public int getPrice() {
-		return price;
+	public Date getDate() {
+		return date;
 	}
 
-	public void setPrice(int price) {
-		this.price = price;
+	public void setDate(Date date) {
+		this.date = date;
 	}
 
 	@Override
 	public String toString() {
-		return "Flower name=" + name + ", colour=" + colour + ", price=" + price;
+		return "name = " + name + ", colour = " + colour + " " + super.toString();
 	}
-	
-	
-	
-	
-	
-	
 
 }

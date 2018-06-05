@@ -1,5 +1,7 @@
 package by.drozdovskaya.entity;
 
+import java.util.Date;
+
 public class Yard extends Flower {
 	
 	private String typeOfPriming;
@@ -10,8 +12,8 @@ public class Yard extends Flower {
 		
 	}
 
-	public Yard(String name, String colour, int longStem, int price, String typeOfPriming) {
-		super(name, colour, price);
+	public Yard(String name, String colour, int longStem, int price, Date date, String typeOfPriming) {
+		super(name, colour, price, date);
 		this.longStem = longStem;
 		this.typeOfPriming = typeOfPriming;
 	}
@@ -36,7 +38,7 @@ public class Yard extends Flower {
 
 	@Override
 	public String toString() {
-		return "Yard typeOfPriming=" + typeOfPriming + ", longStem=" + longStem;
+		return "Yard typeOfPriming = " + typeOfPriming + ", longStem = " + longStem + "см " + super.toString();
 	}
 	
 	

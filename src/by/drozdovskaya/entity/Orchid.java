@@ -1,5 +1,7 @@
 package by.drozdovskaya.entity;
 
+import java.util.Date;
+
 public class Orchid extends Room {
 	
 	private String typeOrchid;
@@ -9,8 +11,8 @@ public class Orchid extends Room {
 		super();
 
 	}
-	public Orchid(String name, String colour, int price, int temperature,String typeOrchid, String typeBlossom) {
-		super(name, colour, price, temperature);
+	public Orchid(String name, String colour, int price, Date date, int temperature, String typeOrchid, String typeBlossom) {
+		super(name, colour, price, date, temperature);
 		this.typeBlossom = typeBlossom;
 		this.typeOrchid = typeOrchid;
 
@@ -29,7 +31,7 @@ public class Orchid extends Room {
 	}
 	@Override
 	public String toString() {
-		return "Orchid typeOrchid=" + typeOrchid + ", typeBlossom=" + typeBlossom;
+		return "\nOrchid typeOrchid = " + typeOrchid + ", typeBlossom = " + typeBlossom + " " + super.toString();
 	}
 	
 	

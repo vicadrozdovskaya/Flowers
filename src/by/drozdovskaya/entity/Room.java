@@ -1,5 +1,7 @@
 package by.drozdovskaya.entity;
 
+import java.util.Date;
+
 public class Room extends Flower{
 
 	private int temperature;
@@ -9,8 +11,8 @@ public class Room extends Flower{
 		
 	}
 
-	public Room(String name, String colour, int price, int temperature) {
-		super(name, colour, price);
+	public Room(String name, String colour, int price, Date date, int temperature) {
+		super(name, colour, price, date);
 		this.temperature = temperature;
 	}
 
@@ -24,7 +26,7 @@ public class Room extends Flower{
 
 	@Override
 	public String toString() {
-		return "Room temperature=" + temperature ;
+		return "Room temperature = " + temperature + " " + super.toString() ;
 	}
 
 	

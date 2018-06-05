@@ -1,5 +1,7 @@
 package by.drozdovskaya.entity;
 
+import java.util.Date;
+
 public class Peony extends Yard{
 	
 	private boolean isBlossomBourgeon;
@@ -8,8 +10,8 @@ public class Peony extends Yard{
 		super();
 	}
 
-	public Peony(String name, String colour, int longStem, int price, String typeOfPriming, boolean isBlossomBourgeon) {
-		super(name, colour, longStem, price, typeOfPriming);
+	public Peony(String name, String colour, int longStem, int price, Date date, String typeOfPriming, boolean isBlossomBourgeon) {
+		super(name, colour, longStem, price, date, typeOfPriming);
 		this.isBlossomBourgeon = isBlossomBourgeon;
 
 	}
@@ -24,7 +26,7 @@ public class Peony extends Yard{
 
 	@Override
 	public String toString() {
-		return "Peony isBlossomBourgeon=" + isBlossomBourgeon;
+		return "\nPeony isBlossomBourgeon = " + isBlossomBourgeon + " " + super.toString();
 	}
 	
 	
